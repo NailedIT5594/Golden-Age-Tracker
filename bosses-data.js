@@ -1,0 +1,638 @@
+window.GA_BOSSES = [
+  {
+    "name": "Black Dragon Kalameet",
+    "game": "Dark Souls I",
+    "area": "Limgrave",
+    "location": "North of Dragon-Burnt Ruins, at the crumbling structure in Agheel's lake.",
+    "drops": "Radagon's Searseal; Marika's Searseal; Calamity Ring",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "black-dragon-kalameet"
+  },
+  {
+    "name": "Armored Warrior",
+    "game": "Sekiro",
+    "area": "Limgrave",
+    "location": "Dragon-Burnt Ruins.",
+    "drops": "None listed",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "armored-warrior"
+  },
+  {
+    "name": "Champion Gundyr",
+    "game": "Dark Souls III",
+    "area": "Limgrave",
+    "location": "Cave of Knowledge, near the start of the game.",
+    "drops": "Gundyr's Halberd",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "iudex-gundyr"
+  },
+  {
+    "name": "Aged Smelter Demon",
+    "game": "Dark Souls II",
+    "area": "Limgrave",
+    "location": "Broken bridge to Liurnia, north of Stormhill Shack Site of Grace.",
+    "drops": "Smelter Sword",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "aged-smelter-demon"
+  },
+  {
+    "name": "Sword Saint Isshin",
+    "game": "Sekiro",
+    "area": "Shadow of the Erdtree DLC Areas",
+    "location": "Cliff southeast of Ellac Greatbridge, northeast of Three-Path Cross Site of Grace.",
+    "drops": "Kaimon; Hakun; armor",
+    "bossReq": ["Genichiro"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "sword-saint-isshin"
+  },
+  {
+    "name": "Shinobi Owl",
+    "game": "Sekiro",
+    "area": "Limgrave",
+    "location": "Stormveil Castle, Ulcerated Tree Spirit arena before the Godwyn corpse.",
+    "drops": "Kageotoshi",
+    "bossReq": ["Dragonlord Placidusax", "Stormveil Ulcerated Tree Spirit"],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "shinobi-owl"
+  },
+  {
+    "name": "Blue Smelter Demon",
+    "game": "Dark Souls II",
+    "area": "Liurnia of the Lakes",
+    "location": "Before the elevator in Isolated Divine Tower.",
+    "drops": "Aged Smelter Sword",
+    "bossReq": ["Malenia"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "blue-smelter-demon"
+  },
+  {
+    "name": "Demon of Hatred",
+    "game": "Sekiro",
+    "area": "Caelid",
+    "location": "Northeastern edge of Radahn's arena.",
+    "drops": "Nezumikiri; Burning Grudge",
+    "bossReq": ["Dragonlord Placidusax", "Starscourge Radahn"],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "demon-of-hatred"
+  },
+  {
+    "name": "Slave Knight Gael",
+    "game": "Dark Souls III",
+    "area": "Caelid",
+    "location": "Radahn's arena; use the DS3 eclipse bonfire teleport beside Radahn's Site of Grace.",
+    "drops": "Greatsword of Gael (armor removed)",
+    "bossReq": ["Starscourge Radahn"],
+    "taskReq": ["Ignite the Erdtree"],
+    "initial": true,
+    "stableId": "slave-knight-gael"
+  },
+  {
+    "name": "Headless",
+    "game": "Sekiro",
+    "area": "Altus Plateau and Leyndell",
+    "location": "Leyndell Sewers: tunnel maze toward Dung Eater, then right into the large tunnel before Miranda blossoms.",
+    "drops": "Yashariku's Spiritfall",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "headless"
+  },
+  {
+    "name": "Pontiff Sulyvahn",
+    "game": "Dark Souls III",
+    "area": "Altus Plateau and Leyndell",
+    "location": "Erdtree Sanctuary, in the pre-Ashen Capital Golden Godfrey arena.",
+    "drops": "Profaned Greatsword; Greatsword of Judgement",
+    "bossReq": ["Morgott", "Golden Godfrey"],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "pontiff-sulyvahn"
+  },
+  {
+    "name": "Gwyn, Lord of Cinder",
+    "game": "Dark Souls I",
+    "area": "Altus Plateau and Leyndell",
+    "location": "Leyndell, Ashen Capital, in a new structure near the Ashen Capital Site of Grace.",
+    "drops": "Soul of Gwyn, Lord of Cinder",
+    "bossReq": ["Maliketh"],
+    "taskReq": ["Ignite the Erdtree"],
+    "initial": false,
+    "stableId": "gwyn-lord-of-cinder"
+  },
+  {
+    "name": "Twin Princes",
+    "game": "Dark Souls III",
+    "area": "Altus Plateau and Leyndell",
+    "location": "First floor of Fortified Manor; interact with the coiled sword.",
+    "drops": "Soul of Twin Princes; Lorian armor; Twin Princes Greatsword",
+    "bossReq": ["Dragonlord Placidusax"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "twin-princes"
+  },
+  {
+    "name": "Abyss Watchers",
+    "game": "Dark Souls III",
+    "area": "Mt. Gelmir",
+    "location": "Gelmir Hero's Grave.",
+    "drops": "Wolf's Blood Soul; Undead Legion Greatsword and armor; Bloodhound Knight Floh Spirit Ashes",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "abyss-watchers"
+  },
+  {
+    "name": "Manus, Father of the Abyss",
+    "game": "Dark Souls I",
+    "area": "Mt. Gelmir",
+    "location": "Stone-bowl chalice near Oozing Abyss Site of Grace, east of Rampartside Path just inside the outer wall.",
+    "drops": "Dark Bead; Climax spells",
+    "bossReq": ["Artorias of the Abyss"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "manus-father-of-the-abyss"
+  },
+  {
+    "name": "Demon Princes",
+    "game": "Dark Souls III",
+    "area": "Shadow of the Erdtree DLC Areas",
+    "location": "Large cave near Ancient Dragon-Man, before Jagged Peak.",
+    "drops": "Onikiri and Ubadachi",
+    "bossReq": [],
+    "taskReq": [
+      "Check whether Rykard is required in your version",
+      "Check whether Dragonlord Placidusax is required in your version"
+    ],
+    "initial": false,
+    "stableId": "demon-princes"
+  },
+  {
+    "name": "Dancer of the Boreal Valley",
+    "game": "Dark Souls III",
+    "area": "Nokron and Nokstella",
+    "location": "Night's Sacred Ground, Nokron.",
+    "drops": "Dancer's Enchanted Swords; Night Pursuer",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "dancer-of-the-boreal-valley"
+  },
+  {
+    "name": "Aldrich, Devourer of Gods",
+    "game": "Dark Souls III",
+    "area": "Nokron and Nokstella",
+    "location": "Top of Nokstella, where the Moon of Nokstella talisman is found.",
+    "drops": "Soul of Aldrich; Rain of Darkmoon Arrows",
+    "bossReq": [],
+    "taskReq": ["Ignite the Erdtree"],
+    "initial": false,
+    "stableId": "aldrich-devourer-of-gods"
+  },
+  {
+    "name": "Great Grey Wolf Sif",
+    "game": "Dark Souls I",
+    "area": "Ravine-Veiled Village and Northern Liurnia Approach",
+    "location": "Ravine-Veiled Village, underneath Magma Wyrm Makar; interact with the sword.",
+    "drops": "Wolf Knight Greatshield; Blood of the Great Wolf",
+    "bossReq": ["Abyss Watchers"],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "great-grey-wolf-sif"
+  },
+  {
+    "name": "Artorias of the Abyss",
+    "game": "Dark Souls I",
+    "area": "Miquella's Haligtree and Consecrated Snowfield",
+    "location": "Miquella's Haligtree; use the item from Sif in the open area down the hill from Beside the Church Site of Grace.",
+    "drops": "Greatsword and Covenant of Artorias; Wolf Knight armor set",
+    "bossReq": ["Great Grey Wolf Sif"],
+    "taskReq": ["Obtain Blood of the Great Wolf"],
+    "initial": true,
+    "stableId": "artorias-of-the-abyss"
+  },
+  {
+    "name": "Sister Friede",
+    "game": "Dark Souls III",
+    "area": "Miquella's Haligtree and Consecrated Snowfield",
+    "location": "Consecrated Snowfield.",
+    "drops": "Friede's Great Scythe; armor",
+    "bossReq": ["Borealis"],
+    "taskReq": [
+      "Ignite the Erdtree",
+      "Unlock Ordina's seal",
+      "Exhaust Priscilla's dialogue at the top of the steps toward the Haligtree teleport",
+      "Talk to Priscilla at the western-edge snowfield shack near the runebear and north of the Mohgwyn teleport",
+      "Let Priscilla teleport you",
+      "Talk to Friede in the tower twice"
+    ],
+    "initial": false,
+    "stableId": "sister-friede"
+  },
+  {
+    "name": "Corrupted Monk",
+    "game": "Sekiro",
+    "area": "Miquella's Haligtree and Consecrated Snowfield",
+    "location": "Haligtree bridge after Loretta and before Prayer Room Site of Grace.",
+    "drops": "Dematerialized Kernel talisman",
+    "bossReq": ["Dragonlord Placidusax"],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "corrupted-monk"
+  },
+  {
+    "name": "Emerald-Armed Mantis",
+    "game": "Black Myth: Wukong",
+    "area": "Miquella's Haligtree and Consecrated Snowfield",
+    "location": "Northernmost grassy ledge in Rauh Ruins, northwest of the tower with the Stone-Sheathed Sword.",
+    "drops": "Mantis Bloodblade",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "emerald-armed-mantis"
+  },
+  {
+    "name": "Yhorm the Giant",
+    "game": "Dark Souls III",
+    "area": "Crumbling Farum Azula",
+    "location": "Godskin Duo arena; interact with the coiled sword opposite Dragon Temple Altar Site of Grace.",
+    "drops": "Ring of Giants; Soul of Yhorm the Giant",
+    "bossReq": ["Dragonlord Placidusax", "Godskin Duo"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "yhorm-the-giant"
+  },
+  {
+    "name": "Dragonslayer Armour",
+    "game": "Dark Souls III",
+    "area": "Crumbling Farum Azula",
+    "location": "Platform after Crumbling Beast Grave, where the ancient dragon fight occurs; appears after the dragon flies down.",
+    "drops": "Armor set; Greatshield; Axe",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "dragonslayer-armour"
+  },
+  {
+    "name": "Nameless King",
+    "game": "Dark Souls III",
+    "area": "Crumbling Farum Azula",
+    "location": "Interact with the dragon altar where the Crucible Knight is found.",
+    "drops": "Dragonslayer Swordspear",
+    "bossReq": ["Crucible Knight near Dragon Church (roof)", "Dragonlord Placidusax"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "nameless-king"
+  },
+  {
+    "name": "Glovis, Disciple of St. Trina",
+    "game": "Bloodborne",
+    "area": "Shadow of the Erdtree DLC Areas",
+    "location": "Lower waterfall near a giant crayfish, upstream from Ellac River Downstream or downstream from Ellac River Cave Site of Grace.",
+    "drops": "Heretic Hook-Blade Scythe; Buried in the Palace of Grace lore item",
+    "bossReq": ["Putrescent Knight"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "glovis-disciple-of-st-trina"
+  },
+  {
+    "name": "Sun Wukong / Great Sage's Broken Shell",
+    "game": "Black Myth: Wukong",
+    "area": "Shadow of the Erdtree DLC Areas",
+    "location": "Great Sage Dream Memory.",
+    "drops": "Ruyi Jingu Bang Staff; Monkey King's armor set",
+    "bossReq": ["Consort Radahn"],
+    "taskReq": [
+      "Obtain Dream Bell from the jellyfish NPC at Kale's church",
+      "Interact with Miquella's memory to obtain the Initial Dew Drop",
+      "Bring Initial Dew Drop to the Scadutree chalice and interact after hopping inside",
+      "When the glowing light appears, use the Dream Bell"
+    ],
+    "initial": false,
+    "stableId": "sun-wukong-great-sage-s-broken-shell"
+  },
+  {
+    "name": "Ludwig, the Accursed",
+    "game": "Bloodborne",
+    "area": "Hunter's Nightmare and Bloodborne-Themed Areas",
+    "location": "Hunter's Nightmare.",
+    "drops": "Holy Moonlight Sword",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "ludwig-the-accursed"
+  },
+  {
+    "name": "Lady Maria",
+    "game": "Bloodborne",
+    "area": "Hunter's Nightmare and Bloodborne-Themed Areas",
+    "location": "Astral Clocktower, accessed through a tombstone in Hunter's Dream.",
+    "drops": "Rakuyo; armor",
+    "bossReq": [],
+    "taskReq": [
+      "Obtain Dream Bell from Messenger Nikos after obtaining the Spectral Steed Whistle at 'Junction'",
+      "Speak to Gatekeeper Agatha in Worldlink Atrium"
+    ],
+    "initial": false,
+    "stableId": "lady-maria"
+  },
+  {
+    "name": "Laurence, the First Vicar",
+    "game": "Bloodborne",
+    "area": "Hunter's Nightmare and Bloodborne-Themed Areas",
+    "location": "Below the Research Hall elevator in Pierre's Bloodborne area, after Ludwig and Looking Glass Knight.",
+    "drops": "Fire Paper (reusable fire-damage reskin, per guide)",
+    "bossReq": ["Ludwig, the Accursed", "Looking Glass Knight"],
+    "taskReq": ["Complete the Lady Maria prerequisites"],
+    "initial": false,
+    "stableId": "laurence-the-first-vicar"
+  },
+  {
+    "name": "Gehrman and Moon Presence",
+    "game": "Bloodborne",
+    "area": "Hunter's Nightmare and Bloodborne-Themed Areas",
+    "location": "Hunter's Dream.",
+    "drops": "First Hunter armor; Burial Blade; Crescent Rose",
+    "bossReq": ["Orphan of Kos"],
+    "taskReq": ["Follow Gatekeeper Agatha/Hunter's Dream dialogue loops to open the gate to the great tree"],
+    "initial": false,
+    "stableId": "gehrman-and-moon-presence"
+  },
+  {
+    "name": "Orphan of Kos",
+    "game": "Bloodborne",
+    "area": "Hunter's Nightmare and Bloodborne-Themed Areas",
+    "location": "Astral Clocktower, interacting with Lady Maria's chair.",
+    "drops": "Kos Parasite; Dust",
+    "bossReq": ["Lady Maria"],
+    "taskReq": ["Ring the Dream Bell at Lady Maria's chair when prompted"],
+    "initial": false,
+    "stableId": "orphan-of-kos"
+  },
+  {
+    "name": "Looking Glass Knight",
+    "game": "Dark Souls II",
+    "area": "Hunter's Nightmare and Bloodborne-Themed Areas",
+    "location": "Hunter's Nightmare, after Ludwig and before the Research Hall/Laurence elevator.",
+    "drops": "King's Mirror Shield; Eye Pendant",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "looking-glass-knight"
+  },
+  {
+    "name": "Shura",
+    "game": "Sekiro",
+    "area": "Roundtable Hold and Worldlink-Related Areas",
+    "location": "First floor of Roundtable Hold, at the Alberich invader's location.",
+    "drops": "Shura armor; Kusabimaru and Hairui",
+    "bossReq": ["Demon of Hatred", "Maliketh"],
+    "taskReq": ["Ignite the Erdtree"],
+    "initial": false,
+    "stableId": "shura"
+  },
+  {
+    "name": "Lone Shadow",
+    "game": "Sekiro",
+    "area": "Roundtable Hold and Worldlink-Related Areas",
+    "location": "Western Nameless Mausoleum.",
+    "drops": "Hermit's Notes; Lone Shadow Kick Technique",
+    "bossReq": ["Consort Radahn"],
+    "taskReq": [
+      "Obtain the Blonde Braided Ring from Heolstor",
+      "Interact with Miquella's memory"
+    ],
+    "initial": false,
+    "stableId": "lone-shadow"
+  },
+  {
+    "name": "Sacrificial Cavalry",
+    "game": "Sekiro",
+    "area": "Roundtable Hold and Worldlink-Related Areas",
+    "location": "Southern Nameless Mausoleum.",
+    "drops": "St. Trina's Disciples Cookbook [4]; Folded Paper",
+    "bossReq": ["Consort Radahn"],
+    "taskReq": [
+      "Obtain the Blonde Braided Ring from Heolstor",
+      "Interact with Miquella's memory"
+    ],
+    "initial": false,
+    "stableId": "sacrificial-cavalry"
+  },
+  {
+    "name": "Darkeater Midir",
+    "game": "Dark Souls III",
+    "area": "Roundtable Hold and Worldlink-Related Areas",
+    "location": "Astel, Naturalborn of the Void arena.",
+    "drops": "Frayed Blade 'Starscourge'",
+    "bossReq": ["Astel, Naturalborn of the Void", "Dragonlord Placidusax"],
+    "taskReq": [
+      "Progress Ranni's quest past Astel",
+      "Ignite the Erdtree",
+      "Activate the Leyndell Ashen Capital Site of Grace",
+      "Buy Astel and Placidusax Spirit Echoes from Cohen in lower Worldlink Atrium",
+      "Speak to Gatekeeper Agatha through the door after the Alberich invader in lower Roundtable",
+      "Obtain Midir's soul and return to Astel's arena"
+    ],
+    "initial": false,
+    "stableId": "darkeater-midir"
+  },
+  {
+    "name": "Soul of Cinder",
+    "game": "Dark Souls III",
+    "area": "Other Locations and Special Interactions",
+    "location": "Forge of the Giants.",
+    "drops": "Coded Sword; Firelink armor",
+    "bossReq": ["Yhorm the Giant", "Twin Princes", "Aldrich, Devourer of Gods", "Abyss Watchers"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "soul-of-cinder"
+  },
+  {
+    "name": "Starscourge Radahn",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "starscourge-radahn"
+  },
+  {
+    "name": "Dragonlord Placidusax",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "dragonlord-placidusax"
+  },
+  {
+    "name": "Morgott",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "morgott"
+  },
+  {
+    "name": "Golden Godfrey",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "golden-godfrey"
+  },
+  {
+    "name": "Maliketh",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "maliketh"
+  },
+  {
+    "name": "Malenia",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "malenia"
+  },
+  {
+    "name": "Godskin Duo",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "godskin-duo"
+  },
+  {
+    "name": "Consort Radahn",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "consort-radahn"
+  },
+  {
+    "name": "Borealis",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "borealis"
+  },
+  {
+    "name": "Putrescent Knight",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "putrescent-knight"
+  },
+  {
+    "name": "Astel, Naturalborn of the Void",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "astel-naturalborn-of-the-void"
+  },
+  {
+    "name": "Genichiro",
+    "game": "Sekiro",
+    "area": "Other Locations and Special Interactions",
+    "location": "Where Lansseax is, outside Leyndell walls near Black Knife.",
+    "drops": "Oka and Raidachi",
+    "bossReq": ["Lansseax", "Dragonlord Placidusax"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "genichiro"
+  },
+  {
+    "name": "Stormveil Ulcerated Tree Spirit",
+    "game": "External prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "Mark defeated if you have beaten this Elden Ring boss.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "stormveil-ulcerated-tree-spirit"
+  },
+  {
+    "name": "Crucible Knight near Dragon Church (roof)",
+    "game": "External prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "Mark defeated if you have beaten this Elden Ring boss.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "crucible-knight-near-dragon-church-roof"
+  },
+  {
+    "name": "Lansseax",
+    "game": "External prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "Mark defeated if you have beaten this Elden Ring boss.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "lansseax"
+  },
+  {
+    "name": "Heolstor",
+    "game": "External prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "Mark defeated if you have beaten this encounter.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "heolstor"
+  }
+];
