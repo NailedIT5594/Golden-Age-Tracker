@@ -1,28 +1,94 @@
-THE GOLDEN AGE COMPANION WEBSITE
+# The Golden Age - Elden Ring Companion App
 
-Open index.html or The_Golden_Age_Interactive_Checklist.html in a modern browser. The site runs locally without a server or internet access.
+Welcome to The Golden Age Companion App! This is a lightweight, fully interactive progress tracker and field guide built for the Golden Age Elden Ring mod. 
 
-Keep these files together: the page HTML files, app.css, app.js, bosses-data.js, rewards-data.js, extras.js, and elden-ring-hero.png. Each page links to the same shared data and localStorage progress. Progress is stored per browser and device; use Settings & Data to export or import a JSON backup.
+Whether you are hosting it live via GitHub Pages or running it locally from your desktop, the app operates completely client-side—no external servers, backend databases, or API keys required.
 
+---
 
-Recent companion improvements
-- Achievements now render a dedicated 30-entry page with Common, Uncommon, Rare, Epic, and Legendary tiers, four secret milestones, search/filter/sort controls, pinning, retroactive evaluation, and saved notifications. Tracked catalog counts reflect 40 mod bosses, 25 shared prerequisite entries, 77 unique reward IDs, nine reward categories, and 25 weapon records.
-- The former empty Achievements state came from the default “All statuses” option being treated as a specific status filter, excluding every achievement. The filter now treats that option as inclusive.
-- Boss Intel opens from boss cards and gathers the shared boss, prerequisite, reward, source, verification, and personal note records in one accessible dialog.
-- assets/page-emblems.svg is original local SVG interface artwork created for this site. It contains reusable icons for the thirteen navigation pages; no external image assets or third-party icon library are loaded. Existing boss records include no portraits, so Boss Intel displays a decorative initials fallback.
-- Achievement pins and boss pins are stored in the existing version 3 local tracker object and included in its JSON export/import. Older data without pin fields loads with empty pin lists; existing progress records are retained.
+## Quick Start
 
+- Live Deployment: Simply navigate to your GitHub Pages URL in any modern web browser.
+- Local Use: Double-click index.html or The_Golden_Age_Interactive_Checklist.html to open the app directly from your computer.
 
-Hidden talismans and status counts
-----------------------------------
-The navigation includes a dedicated Hidden Talismans page with eight canonical records and original local SVG emblems. The first seven can be collected independently. Eccentric Corpse becomes ready after the first seven are collected, but its own collection state requires a separate manual confirmation. Talismans share the reward collection ledger, so existing JSON backup and restore includes them automatically. The reward catalog, dashboard, progression, prerequisites, and talisman achievements read the same stable talisman IDs. Unspecified and uncertain effect values remain labeled.
+---
 
-Boss states use one mutually exclusive classification: Defeated, Available, Locked, or Unknown. Dashboard and status filters use the same classification so counts add up to the tracked mod boss total.
+## Repository & Folder Structure
 
-Appearance personalization and Journey Journal
-----------------------------------------------
-Settings now include ten coordinated dark-fantasy palettes, editable colors with contrast/status checks, background atmosphere and image controls, four typography presets, responsive layout/surface choices, decorative and emblem treatments, and motion settings. Appearance preferences are saved in the existing goldenAgeSite_v3 localStorage record. Appearance-only JSON import/export changes preferences without touching tracker progress.
+To keep the site running cleanly and ensure audio and images load without issues, make sure your project files are organized as follows:
 
-Journey Journal is a separate page alongside Notes & To-Do List. It stores entries, dates, types, tags, importance, pin state, and stable links to bosses, areas, rewards/talismans, and achievements in that same local record. Entries can be searched, filtered, sorted, pinned, edited, and deleted with confirmation. Progress-based prompts are optional and never create entries automatically. Journal records are included in full tracker backups. Screenshot attachments are not supported; no journal content is uploaded. Older backups without Journal data remain supported.
+├── index.html
+├── The_Golden_Age_Interactive_Checklist.html
+├── app.css
+├── app.js
+├── admin.js                  # Salted PBKDF2 administrative terminal (Ctrl+Shift+~)
+├── extras.js
+├── bosses-data.js
+├── rewards-data.js
+├── talisman-data.js
+├── about.html
+├── achievements.html
+├── areas.html
+├── bosses.html
+├── drops.html
+├── games.html
+├── help.html
+├── home.html
+├── journal.html
+├── notes.html
+├── prereqs.html
+├── progression.html
+├── settings.html
+├── talismans.html
+├── elden-ring-hero.png        # Main hero image in root
+├── 📁 audio/                 # Rarity & completion sound effects (.mp3)
+│   ├── common.mp3
+│   ├── common_2.mp3
+│   ├── common_3.mp3
+│   ├── uncommon.mp3
+│   ├── uncommon_2.mp3
+│   ├── rare.mp3
+│   ├── rare_2.mp3
+│   ├── epic.mp3
+│   ├── epic_2.mp3
+│   ├── legendary.mp3
+│   ├── legendary_2.mp3
+│   ├── legendary_3.mp3
+│   └── 100%.mp3
+└── 📁 assets/                # Icons and vector graphics
+    ├── page-emblems.svg
+    └── talisman-emblems.svg
 
-The journal can be opened with a prefilled entry form from boss details, area cards, reward/talisman records, and achievement cards.
+---
+
+## Features & Highlights
+
+### Achievement System & Audio
+- 30+ Tiered Achievements: Fully categorized across Common, Uncommon, Rare, Epic, Legendary, and four hidden secret milestones.
+- Dynamic Rarity Audio: Plays distinct audio cues upon unlocking achievements based on their rarity tier.
+- 100% Completion Track: Features a dedicated completion sound (100%.mp3) that triggers exclusively when every single achievement has been earned.
+- Full Control: Search, filter, sort, pin, and view saved unlock notification toasts.
+
+### Boss Intel & Tracker Catalog
+- Complete Catalog: Covers 40 mod bosses, 25 prerequisite chains, 77 unique reward IDs across 9 categories, and 25 weapon records.
+- Interactive Boss Intel: Click any boss card to open a unified dialog containing locations, prerequisites, drops, verification notes, and quick journal shortcuts.
+- Accurate Status Tracking: Every boss is cleanly classified as Defeated, Available, Locked, or Unknown.
+
+### Hidden Talismans Field Guide
+- Dedicated tracking page for 8 canonical mod talismans with original SVG emblems.
+- Tracks independent collection states, including dependency checks for end-game talismans like Eccentric Corpse.
+
+### Journey Journal & Notes
+- Log your adventures, boss encounters, and notes with custom tags, dates, importance ratings, and pinned states.
+- Direct shortcuts to prefill journal entries straight from boss cards, area descriptions, and achievements.
+
+### Deep Customization & Admin Control
+- 10 Preset Dark-Fantasy Themes: Customize accent colors, typography, background atmosphere, borders, card styles, and reduced-motion preferences.
+- Admin Terminal: Press Ctrl + Shift + ~ (backtick) or tap the sidebar title 5 times quickly on mobile to access the built-in cryptographically hashed testing terminal.
+
+---
+
+## Data & Backups
+
+- Local Storage: All your progress, journal entries, pinned bosses, and visual settings are saved automatically in your browser (localStorage).
+- Export & Import: Use the Settings & Data menu to export a JSON backup at any time so you can transfer your progress between different browsers or devices safely.
