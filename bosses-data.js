@@ -634,5 +634,115 @@ window.GA_BOSSES = [
     "taskReq": [],
     "initial": false,
     "stableId": "heolstor"
+  },
+  {
+    "name": "Everdark Gladius, Beast of Night",
+    "game": "Nightreign",
+    "area": "Spirit Shelter",
+    "location": "Warp via blue slime (same as vanilla Nightreign after day 2 boss) after defeating Scadutree Avatar",
+    "drops": "Tricephalos Remembrance (Tricephalos' Flames Spell & Colossal Sword)",
+    "bossReq": ["Scadutree Avatar"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "everdark-gladius"
+  },
+  {
+    "name": "Everdark Adel, Baron of Night",
+    "game": "Nightreign",
+    "area": "Spirit Shelter",
+    "location": "Spirit Shelter",
+    "drops": "Gaping Jaw Remembrance (Colossal Weapon & Adel's Electrification Spell)",
+    "bossReq": ["Scadutree Avatar"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "everdark-adel"
+  },
+  {
+    "name": "Everdark Gnoster, Wisdom of Night",
+    "game": "Nightreign",
+    "area": "Spirit Shelter",
+    "location": "Spirit Shelter",
+    "drops": "Sentient Pest Remembrance (2 Spells: Gnoster's Rain of Light & Animus' Transcendent Light)",
+    "bossReq": ["Scadutree Avatar"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "everdark-gnoster"
+  },
+  {
+    "name": "Everdark Maris, Fathom of Night",
+    "game": "Nightreign",
+    "area": "Spirit Shelter",
+    "location": "Spirit Shelter",
+    "drops": "Augur Remembrance (Incant: Augur's Infinite Ocean)",
+    "bossReq": ["Scadutree Avatar"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "everdark-maris"
+  },
+  {
+    "name": "Everdark Libra, Creature of Night",
+    "game": "Nightreign",
+    "area": "Spirit Shelter",
+    "location": "Spirit Shelter",
+    "drops": "Equilibrious Beast Remembrance (Maddening Sigil Incant & Great Hammer)",
+    "bossReq": ["Scadutree Avatar"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "everdark-libra"
+  },
+  {
+    "name": "Everdark Caligo, Miasma of Night",
+    "game": "Nightreign",
+    "area": "Spirit Shelter",
+    "location": "Spirit Shelter",
+    "drops": "Fissure in the Fog Remembrance (Caligo's Ice Ceiling Spell & Heavy Thrusting Sword)",
+    "bossReq": ["Scadutree Avatar"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "everdark-caligo"
+  },
+  {
+    "name": "Everdark Fulghor, Champion of Nightglow",
+    "game": "Nightreign",
+    "area": "Spirit Shelter",
+    "location": "Spirit Shelter",
+    "drops": "Darkdrift Knight Remembrance (Twinblade & Fulghor's Arrow Rain Incant)",
+    "bossReq": ["Scadutree Avatar"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "everdark-fulghor"
+  },
+  {
+    "name": "Heolstor, The Nightlord",
+    "game": "Nightreign",
+    "area": "Spirit Shelter",
+    "location": "Spirit Shelter",
+    "drops": "Nightlord Remembrance (Heolstor's Night Current Spell & Colossal Sword)",
+    "bossReq": ["Scadutree Avatar"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "heolstor-nightlord"
+  },
+  {
+    "name": "The Dreglord / Straghess",
+    "game": "Nightreign",
+    "area": "Spirit Shelter",
+    "location": "Spirit Shelter",
+    "drops": "Dreglord Remembrance (Straghess' Corpse Debris Incant and Colossal Weapon)",
+    "bossReq": ["Scadutree Avatar"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "dreglord-straghess"
+  },
+  {
+    "name": "Everdark Weapon-Bequeathed Harmonia",
+    "game": "Nightreign",
+    "area": "Spirit Shelter",
+    "location": "Spirit Shelter",
+    "drops": "Balancers Remembrance (Balancer's Waves of Purification Spell and Halberd)",
+    "bossReq": ["Scadutree Avatar"],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "everdark-harmonia"
   }
 ];
