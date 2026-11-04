@@ -1,4 +1,4 @@
-﻿(function() {
+(function() {
   const T = window.GA_TRACKER,
         TAL = window.GA_TALISMANS || [],
         R = [...(window.GA_REWARDS || []), ...TAL];
@@ -397,7 +397,7 @@
   }
 
   function dashboardPage() {
-    let v = document.getElementById('dashboard-content');
+    let v = ensureHost('dashboard-content');
     if (!v) return;
     
     let m = T.mods(),
@@ -1337,54 +1337,58 @@
     });
   }
 
-  window.GA_EXTRAS_RENDER = function(id) {
-  if (id === 'home') {
-    // Small delay ensures app.js has finished inserting <div id="dashboard-content"> into the DOM
-    setTimeout(() => {
-      dashboardPage();
-    }, 0);
+  function ensureHost(hostId) {
+    let h = document.getElementById(hostId);
+    if (h) return h;
+    const view = document.getElementById('view');
+    if (!view) return null;
+    view.innerHTML = '<div id="' + hostId + '"></div>';
+    return document.getElementById(hostId);
   }
-  if (id === 'drops') rewardPage();
-  if (id === 'talismans') talismanPage();
-  if (id === 'about') aboutPage();
-  if (id === 'prereqs') {
-    prereqPage();
-    let host = document.getElementById('view');
-    if (host) host.insertAdjacentHTML('beforeend', talismanDependencies());
-  }
-  if (id === 'progression') {
-    let host = document.getElementById('view');
-    if (host && !host.querySelector('.talisman-dependency')) {
-      host.insertAdjacentHTML('beforeend', talismanDependencies());
+
+  function safe(label, fn) {
+    try { return fn(); }
+    catch (err) {
+      console.error('[Golden Age] ' + label + ' failed:', err);
+      const view = document.getElementById('view');
+      if (view && !view.textContent.trim()) {
+        view.innerHTML = '<div class="panel"><h2>Something went wrong loading this page</h2>' +
+          '<p class="small">Try a hard refresh (Ctrl+Shift+R). If it persists, open Settings and reset saved progress, or check the browser console.</p></div>';
+      }
     }
   }
-  if (id === 'settings') settingsPage();
-  if (id === 'journal') journalPage();
-  if (id === 'achievements') achievementPage();
-  if (id === 'help') faqPage();
 
-  if (typeof applySettingEffects === 'function') applySettingEffects();
-  if (typeof decoratePage === 'function') decoratePage(id);
-};
+  window.GA_EXTRAS_RENDER = function(id) {
+    safe('render ' + id, function() {
+    if (id === 'drops') rewardPage();
+    if (id === 'talismans') talismanPage();
+    if (id === 'about') aboutPage();
+    if (id === 'home') dashboardPage();
+    if (id === 'prereqs') {
+      prereqPage();
+      document.getElementById('view').insertAdjacentHTML('beforeend', talismanDependencies());
+    }
+    if (id === 'progression') {
+      let host = document.getElementById('view');
+      if (host && !host.querySelector('.talisman-dependency')) host.insertAdjacentHTML('beforeend', talismanDependencies());
+    }
+    if (id === 'settings') settingsPage();
+    if (id === 'journal') journalPage();
+    if (id === 'achievements') achievementPage();
+    if (id === 'help') faqPage();
+    });
+    safe('applySettingEffects', applySettingEffects);
+    safe('decoratePage', function() { decoratePage(id); });
+  };
 
-  applySettingEffects();
-  window.GA_BOSS_DROP_MIGRATION = T.applyBossDropCollection();
-  syncAchievements(true);
-  T.save();
-  
-  if (document.body.dataset.page === 'drops') rewardPage();
-  if (document.body.dataset.page === 'talismans') talismanPage();
-  if (document.body.dataset.page === 'about') aboutPage();
-  if (document.body.dataset.page === 'home') dashboardPage();
-  if (document.body.dataset.page === 'prereqs') {
-    prereqPage();
-    document.getElementById('view').insertAdjacentHTML('beforeend', talismanDependencies());
-  }
-  if (document.body.dataset.page === 'progression') document.getElementById('view').insertAdjacentHTML('beforeend', talismanDependencies());
-  if (document.body.dataset.page === 'settings') settingsPage();
-  if (document.body.dataset.page === 'journal') journalPage();
-  if (document.body.dataset.page === 'achievements') achievementPage();
-  if (document.body.dataset.page === 'help') faqPage();
-  
-  decoratePage(document.body.dataset.page || 'home');
+  safe('applySettingEffects', applySettingEffects);
+  safe('boss drop migration', function() { window.GA_BOSS_DROP_MIGRATION = T.applyBossDropCollection(); });
+  safe('syncAchievements', function() { syncAchievements(true); });
+  safe('save', function() { T.save(); });
+
+  // Draw the current page (and redraw if the browser restores it from the back/forward cache)
+  window.GA_EXTRAS_RENDER(document.body.dataset.page || 'home');
+  window.addEventListener('pageshow', function(e) {
+    if (e.persisted) window.GA_EXTRAS_RENDER(document.body.dataset.page || 'home');
+  });
 })();
