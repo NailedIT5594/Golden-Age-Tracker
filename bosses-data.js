@@ -168,13 +168,10 @@ window.GA_BOSSES = [
     "name": "Demon Princes",
     "game": "Dark Souls III",
     "area": "Shadow of the Erdtree DLC Areas",
-    "location": "Large cave near Ancient Dragon-Man, before Jagged Peak.",
+    "location": "Jagged Peak area, past the double drake battle, go up both spirit springs and then enter the cave. Turn right and drop down (it is non-lethal).",
     "drops": "Onikiri and Ubadachi",
     "bossReq": [],
-    "taskReq": [
-      "Check whether Rykard is required in your version",
-      "Check whether Dragonlord Placidusax is required in your version"
-    ],
+    "taskReq": [],
     "initial": false,
     "stableId": "demon-princes"
   },
