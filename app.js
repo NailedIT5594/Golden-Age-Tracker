@@ -348,11 +348,9 @@ function stats() {
 }
 
 function home() {
-  setTimeout(() => {
-    if (typeof window.GA_EXTRAS_RENDER === 'function') {
-      window.GA_EXTRAS_RENDER('home');
-    }
-  }, 0);
+  if (typeof window.GA_EXTRAS_RENDER === 'function') {
+    setTimeout(() => window.GA_EXTRAS_RENDER('home'), 0);
+  }
   return '<div id="dashboard-content"></div>';
 }
 
