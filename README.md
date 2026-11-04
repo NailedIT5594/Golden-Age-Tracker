@@ -1,105 +1,55 @@
-# The Golden Age - Elden Ring Companion App
+The Golden Age - Elden Ring Companion App
+Welcome! This is a lightweight, interactive progress tracker and field guide built specifically for the "Golden Age" Elden Ring mod.
 
-Welcome to The Golden Age Companion App! This is a lightweight, fully interactive progress tracker and field guide built for the Golden Age Elden Ring mod. 
+Whether you're running it live via GitHub Pages or just double-clicking it to use it locally on your desktop, everything runs completely client-side in your browser—no backend servers or complicated setup required.
 
-Whether you are hosting it live via GitHub Pages or running it locally from your desktop, the app operates completely client-side—no external servers, backend databases, or API keys required.
+Quick Start
+Live Site: Head over to your GitHub Pages URL in any modern browser.
 
----
+Run Locally: Just open index.html (or The_Golden_Age_Interactive_Checklist.html) right from your project folder.
 
-## Quick Start
+How to Use It
+Track Your Journey: Click through the sidebar navigation to check off bosses, track rewards, and log items as you progress through the mod.
 
-- **Live Deployment:** Simply navigate to your GitHub Pages URL in any modern web browser.
-- **Local Use:** Double-click `index.html` or `The_Golden_Age_Interactive_Checklist.html` to open the app directly from your computer.
+Enable Audio: Give the page a quick click when you first open it so your browser allows achievement sound effects and rarity cues to play.
 
----
+Admin Terminal: Need to test things out? Press Ctrl + Shift + ~ on your keyboard (or tap your sidebar title 5 times quickly on mobile) to pop open the developer terminal. Follow the quick prompt on first use to generate your password hash and drop it into admin.js.
 
-## How to Use This App
+Backups: Your progress saves automatically to your browser's local storage. If you want to move your save to another device or browser, just hop over to the Settings & Data page to export or import a backup JSON file.
 
-1. **Track Your Progress:** Click through the navigation pages to check off defeated bosses, completed tasks, collected items, and hidden talismans as you play through the mod.
-2. **Audio Feedback:** Ensure your browser window has received at least one click or interaction so achievement sound effects and rarity cues can play properly.
-3. **Using the Admin Terminal:** 
-   - Press **Ctrl + Shift + ~** (backtick) on your keyboard, or tap the sidebar title **5 times quickly** if you are on a mobile device, to open the admin terminal.
-   - On first use, it will walk you through generating a secure password and printing a configuration line. Paste that line into `admin.js` to lock down your testing environment.
-4. **Saving & Backing Up:** All progress saves automatically to your browser's local storage. To transfer your progress to another device or browser, visit the **Settings & Data** menu to export and import your save file as a JSON backup.
+What's Inside
+Achievement System & Audio Cues
+30+ Tiered Achievements: Spanning everything from Common and Rare milestones all the way up to hidden secret unlocks.
 
----
+Dynamic Rarity Audio: Distinct sound effects play as you unlock achievements based on how rare they are.
 
-## Repository & Folder Structure
+100% Completion Celebration: A special audio cue (100%.mp3) triggers when you finally check off every single achievement.
 
-To keep the site running cleanly and ensure audio and images load without issues, make sure your project files are organized as follows:
+Full Control: Easily search, filter, sort, pin, and review past unlock notifications.
 
-├── index.html
-├── The_Golden_Age_Interactive_Checklist.html
-├── app.css
-├── app.js
-├── admin.js                  # Salted PBKDF2 administrative terminal (Ctrl+Shift+~)
-├── extras.js
-├── bosses-data.js
-├── rewards-data.js
-├── talisman-data.js
-├── about.html
-├── achievements.html
-├── areas.html
-├── bosses.html
-├── drops.html
-├── games.html
-├── help.html
-├── home.html
-├── journal.html
-├── notes.html
-├── prereqs.html
-├── progression.html
-├── settings.html
-├── talismans.html
-├── elden-ring-hero.png        # Main hero image in root
-├── 📁 audio/                 # Rarity & completion sound effects (.mp3)
-│   ├── common.mp3
-│   ├── common_2.mp3
-│   ├── common_3.mp3
-│   ├── uncommon.mp3
-│   ├── uncommon_2.mp3
-│   ├── rare.mp3
-│   ├── rare_2.mp3
-│   ├── epic.mp3
-│   ├── epic_2.mp3
-│   ├── legendary.mp3
-│   ├── legendary_2.mp3
-│   ├── legendary_3.mp3
-│   └── 100%.mp3
-└── 📁 assets/                # Icons and vector graphics
-    ├── page-emblems.svg
-    └── talisman-emblems.svg
+Boss Intel & Tracker Catalog
+Massive Database: Covers 50 mod bosses, 25 prerequisite chains, 77 unique reward IDs across 9 categories, and 25 weapon records.
 
----
+Interactive Boss Cards: Click any boss to view exact locations, prerequisites, drops, verification notes, and quick journal links.
 
-## Features & Highlights
+Clear Statuses: Instantly see whether a boss is Defeated, Available, Locked, or Unknown.
 
-### Achievement System & Audio
-- **30+ Tiered Achievements:** Fully categorized across Common, Uncommon, Rare, Epic, Legendary, and four hidden secret milestones.
-- **Dynamic Rarity Audio:** Plays distinct audio cues upon unlocking achievements based on their rarity tier.
-- **100% Completion Track:** Features a dedicated completion sound (`100%.mp3`) that triggers exclusively when every single achievement has been earned.
-- **Full Control:** Search, filter, sort, pin, and view saved unlock notification toasts.
+Hidden Talismans Field Guide
+Dedicated Tracker: Keep tabs on all 8 canonical mod talismans complete with custom SVG emblem artwork.
 
-### Boss Intel & Tracker Catalog
-- **Complete Catalog:** Covers 40 mod bosses, 25 prerequisite chains, 77 unique reward IDs across 9 categories, and 25 weapon records.
-- **Interactive Boss Intel:** Click any boss card to open a unified dialog containing locations, prerequisites, drops, verification notes, and quick journal shortcuts.
-- **Accurate Status Tracking:** Every boss is cleanly classified as Defeated, Available, Locked, or Unknown.
+Smart Logic: Tracks independent collection states while checking dependencies for end-game items like the Eccentric Corpse.
 
-### Hidden Talismans Field Guide
-- **Dedicated Tracking:** Dedicated tracking page for 8 canonical mod talismans with original SVG emblems.
-- **Independent States:** Tracks independent collection states, including dependency checks for end-game talismans like Eccentric Corpse.
+Journey Journal & Notes
+Adventure Logging: Jot down field notes, boss encounters, and reminders with custom tags, dates, importance ratings, and pinned states.
 
-### Journey Journal & Notes
-- **Adventure Logging:** Log your adventures, boss encounters, and notes with custom tags, dates, importance ratings, and pinned states.
-- **Quick Shortcuts:** Direct shortcuts to prefill journal entries straight from boss cards, area descriptions, and achievements.
+Quick Links: Jump straight to logging an entry directly from boss cards, area descriptions, or achievements.
 
-### Deep Customization & Admin Control
-- **10 Dark-Fantasy Themes:** Customize accent colors, typography, background atmosphere, borders, card styles, and reduced-motion preferences.
-- **Testing Terminal:** Built-in cryptographically hashed terminal for rapid testing and progress management.
+Deep Customization & Admin Tools
+10 Dark-Fantasy Themes: Personalize your color accents, backgrounds, borders, card styles, and reduced-motion preferences.
 
----
+Developer Terminal: Cryptographically hashed terminal for rapid testing and progress management.
 
-## Data & Backups
+Data & Backups
+Local Storage: All your progress, journal notes, pinned items, and settings are saved safely right in your browser's localStorage.
 
-- **Local Storage:** All your progress, journal entries, pinned bosses, and visual settings are saved automatically in your browser (`localStorage`).
-- **Export & Import:** Use the Settings & Data menu to export a JSON backup at any time so you can transfer your progress between different browsers or devices safely.
+Easy Export/Import: Use the Settings & Data menu anytime you want to download a JSON backup of your save file.
