@@ -348,6 +348,10 @@ function stats() {
 }
 
 function home() {
+  // If an external extras render handler exists for home, trigger it immediately
+  if (window.GA_EXTRAS_RENDER) {
+    setTimeout(() => window.GA_EXTRAS_RENDER('home'), 0);
+  }
   return '<div id="dashboard-content"></div>';
 }
 
