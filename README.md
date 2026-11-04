@@ -8,8 +8,19 @@ Whether you are hosting it live via GitHub Pages or running it locally from your
 
 ## Quick Start
 
-- Live Deployment: Simply navigate to your GitHub Pages URL in any modern web browser.
-- Local Use: Double-click index.html or The_Golden_Age_Interactive_Checklist.html to open the app directly from your computer.
+- **Live Deployment:** Simply navigate to your GitHub Pages URL in any modern web browser.
+- **Local Use:** Double-click `index.html` or `The_Golden_Age_Interactive_Checklist.html` to open the app directly from your computer.
+
+---
+
+## How to Use This App
+
+1. **Track Your Progress:** Click through the navigation pages to check off defeated bosses, completed tasks, collected items, and hidden talismans as you play through the mod.
+2. **Audio Feedback:** Ensure your browser window has received at least one click or interaction so achievement sound effects and rarity cues can play properly.
+3. **Using the Admin Terminal:** 
+   - Press **Ctrl + Shift + ~** (backtick) on your keyboard, or tap the sidebar title **5 times quickly** if you are on a mobile device, to open the admin terminal.
+   - On first use, it will walk you through generating a secure password and printing a configuration line. Paste that line into `admin.js` to lock down your testing environment.
+4. **Saving & Backing Up:** All progress saves automatically to your browser's local storage. To transfer your progress to another device or browser, visit the **Settings & Data** menu to export and import your save file as a JSON backup.
 
 ---
 
@@ -64,31 +75,31 @@ To keep the site running cleanly and ensure audio and images load without issues
 ## Features & Highlights
 
 ### Achievement System & Audio
-- 30+ Tiered Achievements: Fully categorized across Common, Uncommon, Rare, Epic, Legendary, and four hidden secret milestones.
-- Dynamic Rarity Audio: Plays distinct audio cues upon unlocking achievements based on their rarity tier.
-- 100% Completion Track: Features a dedicated completion sound (100%.mp3) that triggers exclusively when every single achievement has been earned.
-- Full Control: Search, filter, sort, pin, and view saved unlock notification toasts.
+- **30+ Tiered Achievements:** Fully categorized across Common, Uncommon, Rare, Epic, Legendary, and four hidden secret milestones.
+- **Dynamic Rarity Audio:** Plays distinct audio cues upon unlocking achievements based on their rarity tier.
+- **100% Completion Track:** Features a dedicated completion sound (`100%.mp3`) that triggers exclusively when every single achievement has been earned.
+- **Full Control:** Search, filter, sort, pin, and view saved unlock notification toasts.
 
 ### Boss Intel & Tracker Catalog
-- Complete Catalog: Covers 40 mod bosses, 25 prerequisite chains, 77 unique reward IDs across 9 categories, and 25 weapon records.
-- Interactive Boss Intel: Click any boss card to open a unified dialog containing locations, prerequisites, drops, verification notes, and quick journal shortcuts.
-- Accurate Status Tracking: Every boss is cleanly classified as Defeated, Available, Locked, or Unknown.
+- **Complete Catalog:** Covers 40 mod bosses, 25 prerequisite chains, 77 unique reward IDs across 9 categories, and 25 weapon records.
+- **Interactive Boss Intel:** Click any boss card to open a unified dialog containing locations, prerequisites, drops, verification notes, and quick journal shortcuts.
+- **Accurate Status Tracking:** Every boss is cleanly classified as Defeated, Available, Locked, or Unknown.
 
 ### Hidden Talismans Field Guide
-- Dedicated tracking page for 8 canonical mod talismans with original SVG emblems.
-- Tracks independent collection states, including dependency checks for end-game talismans like Eccentric Corpse.
+- **Dedicated Tracking:** Dedicated tracking page for 8 canonical mod talismans with original SVG emblems.
+- **Independent States:** Tracks independent collection states, including dependency checks for end-game talismans like Eccentric Corpse.
 
 ### Journey Journal & Notes
-- Log your adventures, boss encounters, and notes with custom tags, dates, importance ratings, and pinned states.
-- Direct shortcuts to prefill journal entries straight from boss cards, area descriptions, and achievements.
+- **Adventure Logging:** Log your adventures, boss encounters, and notes with custom tags, dates, importance ratings, and pinned states.
+- **Quick Shortcuts:** Direct shortcuts to prefill journal entries straight from boss cards, area descriptions, and achievements.
 
 ### Deep Customization & Admin Control
-- 10 Preset Dark-Fantasy Themes: Customize accent colors, typography, background atmosphere, borders, card styles, and reduced-motion preferences.
-- Admin Terminal: Press Ctrl + Shift + ~ (backtick) or tap the sidebar title 5 times quickly on mobile to access the built-in cryptographically hashed testing terminal.
+- **10 Dark-Fantasy Themes:** Customize accent colors, typography, background atmosphere, borders, card styles, and reduced-motion preferences.
+- **Testing Terminal:** Built-in cryptographically hashed terminal for rapid testing and progress management.
 
 ---
 
 ## Data & Backups
 
-- Local Storage: All your progress, journal entries, pinned bosses, and visual settings are saved automatically in your browser (localStorage).
-- Export & Import: Use the Settings & Data menu to export a JSON backup at any time so you can transfer your progress between different browsers or devices safely.
+- **Local Storage:** All your progress, journal entries, pinned bosses, and visual settings are saved automatically in your browser (`localStorage`).
+- **Export & Import:** Use the Settings & Data menu to export a JSON backup at any time so you can transfer your progress between different browsers or devices safely.
