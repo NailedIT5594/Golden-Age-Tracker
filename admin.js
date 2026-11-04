@@ -416,7 +416,7 @@
         delete snaps[name];
         lsSet(LS.snaps, snaps);
         print('Dropped "' + name + '".', 'ok');
-      } else print('Usage: snapshot save|restore|list|drop [name]', 'err');
+      } else print('Snapshot save|restore|list|drop [name]', 'err');
     },
 
     async wipe() {
