@@ -1,4 +1,4 @@
-﻿const source = window.GA_BOSSES;
+const source = window.GA_BOSSES;
 const pages = [
   ['home', 'Home / Dashboard'],
   ['about', 'About the Mod'],
@@ -348,9 +348,6 @@ function stats() {
 }
 
 function home() {
-  if (typeof window.GA_EXTRAS_RENDER === 'function') {
-    setTimeout(() => window.GA_EXTRAS_RENDER('home'), 0);
-  }
   return '<div id="dashboard-content"></div>';
 }
 
@@ -690,3 +687,26 @@ document.getElementById('art').onpointermove = e => {
 };
 document.getElementById('art').onpointerleave = e => e.currentTarget.style.transform = '';
 render();
+// --- Diagnostics: if a page body is empty after load, say why on the page itself ---
+window.__GA_ERRORS = window.__GA_ERRORS || [];
+window.addEventListener('error', function(e) {
+  window.__GA_ERRORS.push((e.message || 'script error') + (e.filename ? ' @ ' + e.filename.split('/').pop() + ':' + e.lineno : ''));
+  var t = e.target;
+  if (t && t.tagName === 'SCRIPT') window.__GA_ERRORS.push('FAILED TO LOAD: ' + (t.getAttribute('src') || ''));
+}, true);
+window.addEventListener('load', function() {
+  var view = document.getElementById('view');
+  if (!view) return;
+  var d = document.getElementById('dashboard-content');
+  var empty = d ? !d.children.length && !d.textContent.trim() : !view.textContent.trim();
+  if (!empty) return;
+  var host = d || view;
+  var info = [];
+  info.push('extras.js ran: ' + (window.__GA_EXTRAS_LOADED ? 'yes' : 'NO'));
+  info.push('talisman data: ' + (window.GA_TALISMANS ? window.GA_TALISMANS.length + ' entries' : 'MISSING'));
+  info.push('reward data: ' + (window.GA_REWARDS ? window.GA_REWARDS.length + ' entries' : 'MISSING'));
+  info = info.concat(window.__GA_ERRORS);
+  host.innerHTML = '<div class="panel"><h2>This page did not finish loading</h2>' +
+    '<p class="small">Try a hard refresh (Ctrl+Shift+R). If this keeps showing, send the lines below.</p>' +
+    '<pre class="small" style="white-space:pre-wrap">' + info.map(function(s){return String(s).replace(/[<&]/g,'');}).join('\n') + '</pre></div>';
+});
