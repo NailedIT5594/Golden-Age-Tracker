@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <symbol id="lotus" viewBox="0 0 64 64">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- lotus flower -->
+      <path d="M32 6 C26 14 26 22 32 28 C38 22 38 14 32 6 Z" fill="currentColor" fill-opacity=".22"/>
+      <path d="M32 28 C22 24 15 16 14 12 C13 21 19 30 32 32"/>
+      <path d="M32 28 C42 24 49 16 50 12 C51 21 45 30 32 32"/>
+      <path d="M32 32 C20 32 10 28 6 22 C8 33 18 38 32 36"/>
+      <path d="M32 32 C44 32 54 28 58 22 C56 33 46 38 32 36"/>
+      <!-- ripples -->
+      <path d="M12 41 C20 45 44 45 52 41" stroke-opacity=".7"/>
+    </g>
+    <!-- hooded silhouette below the bloom -->
+    <path fill="currentColor" d="M32 44 C27 44 24.500 47.500 24.500 51 C24.500 53 25.500 54.500 25 56 C23 57.500 19 59 18 62 L46 62 C45 59 41 57.500 39 56 C38.500 54.500 39.500 53 39.500 51 C39.500 47.500 37 44 32 44 Z"/>
+  </symbol>
+</svg>
