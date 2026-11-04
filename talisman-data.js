@@ -75,5 +75,15 @@ window.GA_TALISMANS = [
     effectNote: 'This is the final collection reward. Prerequisite readiness does not mean this talisman is collected.',
     verification: 'Unverified', sourceTitle: 'User-provided hidden talisman guide', sourceUrl: '', modVersion: 'Not specified', image: '',
     acquisition: 'Collection reward: interact with the glowing blue object after collecting the first seven talismans.', notes: 'Marked as a distinct final collection reward. Its own collection state must be confirmed separately.'
+  },
+  {
+    id: 'hidden-talisman-ripples-of-the-lotus', name: 'Ripples of The Lotus', category: 'Talismans', itemType: 'hidden talisman', acquisitionType: 'hidden pickup', icon: 'lotus', bossId: '', bossName: '',
+    area: 'Cathedral of Manus Celes', location: 'North of Cathedral of Manus Celes Site of Grace',
+    directions: 'Start at the Cathedral of Manus Celes Site of Grace and head north. Follow the edge of the building around to a corner; the talisman is hidden in a bush.',
+    prerequisites: 'None listed.',
+    effect: 'Effect not yet recorded.',
+    effectNote: 'Only the location has been supplied for this talisman. Add its effect once confirmed in-game.',
+    verification: 'Unverified', sourceTitle: 'Player-supplied location', sourceUrl: '', modVersion: 'Not specified', image: '',
+    acquisition: 'Hidden pickup in a bush in a corner around the edge of the building, north of the Cathedral of Manus Celes Site of Grace.', notes: 'Location supplied by the site owner; not independently verified. It is not one of the seven talismans required for Eccentric Corpse.'
   }
 ];
