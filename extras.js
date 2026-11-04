@@ -1338,25 +1338,34 @@
   }
 
   window.GA_EXTRAS_RENDER = function(id) {
-    if (id === 'drops') rewardPage();
-    if (id === 'talismans') talismanPage();
-    if (id === 'about') aboutPage();
-    if (id === 'home') dashboardPage();
-    if (id === 'prereqs') {
-      prereqPage();
-      document.getElementById('view').insertAdjacentHTML('beforeend', talismanDependencies());
+  if (id === 'home') {
+    // Small delay ensures app.js has finished inserting <div id="dashboard-content"> into the DOM
+    setTimeout(() => {
+      dashboardPage();
+    }, 0);
+  }
+  if (id === 'drops') rewardPage();
+  if (id === 'talismans') talismanPage();
+  if (id === 'about') aboutPage();
+  if (id === 'prereqs') {
+    prereqPage();
+    let host = document.getElementById('view');
+    if (host) host.insertAdjacentHTML('beforeend', talismanDependencies());
+  }
+  if (id === 'progression') {
+    let host = document.getElementById('view');
+    if (host && !host.querySelector('.talisman-dependency')) {
+      host.insertAdjacentHTML('beforeend', talismanDependencies());
     }
-    if (id === 'progression') {
-      let host = document.getElementById('view');
-      if (host && !host.querySelector('.talisman-dependency')) host.insertAdjacentHTML('beforeend', talismanDependencies());
-    }
-    if (id === 'settings') settingsPage();
-    if (id === 'journal') journalPage();
-    if (id === 'achievements') achievementPage();
-    if (id === 'help') faqPage();
-    applySettingEffects();
-    decoratePage(id);
-  };
+  }
+  if (id === 'settings') settingsPage();
+  if (id === 'journal') journalPage();
+  if (id === 'achievements') achievementPage();
+  if (id === 'help') faqPage();
+
+  if (typeof applySettingEffects === 'function') applySettingEffects();
+  if (typeof decoratePage === 'function') decoratePage(id);
+};
 
   applySettingEffects();
   window.GA_BOSS_DROP_MIGRATION = T.applyBossDropCollection();
