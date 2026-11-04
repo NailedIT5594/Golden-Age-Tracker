@@ -170,7 +170,7 @@ window.GA_BOSSES = [
     "area": "Shadow of the Erdtree DLC Areas",
     "location": "Jagged Peak area, past the double drake battle, go up both spirit springs and then enter the cave. Turn right and drop down (it is non-lethal).",
     "drops": "Onikiri and Ubadachi",
-    "bossReq": [],
+    "bossReq": ["Dragonlord Placidusax", "Rykard"],
     "taskReq": [],
     "initial": false,
     "stableId": "demon-princes"
