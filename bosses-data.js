@@ -170,7 +170,7 @@ window.GA_BOSSES = [
     "area": "Shadow of the Erdtree DLC Areas",
     "location": "Jagged Peak area, past the double drake battle, go up both spirit springs and then enter the cave. Turn right and drop down (it is non-lethal).",
     "drops": "Onikiri and Ubadachi",
-    "bossReq": ["Dragonlord Placidusax", "Rykard"],
+    "bossReq": ["Dragonlord Placidusax", "Rykard, Lord of Blasphemy"],
     "taskReq": [],
     "initial": false,
     "stableId": "demon-princes"
@@ -468,7 +468,7 @@ window.GA_BOSSES = [
     "stableId": "starscourge-radahn"
   },
   {
-    "name": "Rykard, Lord of Blashphemy",
+    "name": "Rykard, Lord of Blasphemy",
     "game": "Elden Ring prerequisites",
     "area": "Prerequisite bosses (not in mod list)",
     "location": "External prerequisite boss; mark manually here if you have defeated it.",
