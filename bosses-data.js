@@ -4,7 +4,7 @@ window.GA_BOSSES = [
     "game": "Dark Souls I",
     "area": "Limgrave",
     "location": "North of Dragon-Burnt Ruins, at the crumbling structure in Agheel's lake.",
-    "drops": "Radagon's Searseal; Marika's Searseal; Calamity Ring",
+    "drops": "Calamity Ring",
     "bossReq": [],
     "taskReq": [],
     "initial": false,
