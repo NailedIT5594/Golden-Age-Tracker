@@ -644,6 +644,17 @@ window.GA_BOSSES = [
     "stableId": "heolstor"
   },
   {
+    "name": "Scadutree Avatar",
+    "game": "Elden Ring prerequisite",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": false,
+    "stableId": "scadutree-avatar"
+  },
+  {
     "name": "Everdark Gladius, Beast of Night",
     "game": "Nightreign",
     "area": "Spirit Shelter",
