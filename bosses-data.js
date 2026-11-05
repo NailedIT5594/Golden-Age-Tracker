@@ -468,6 +468,17 @@ window.GA_BOSSES = [
     "stableId": "starscourge-radahn"
   },
   {
+    "name": "Rykard, Lord of Blashphemy",
+    "game": "Elden Ring prerequisites",
+    "area": "Prerequisite bosses (not in mod list)",
+    "location": "External prerequisite boss; mark manually here if you have defeated it.",
+    "drops": "—",
+    "bossReq": [],
+    "taskReq": [],
+    "initial": true,
+    "stableId": "rykard-lord-of-blasphemy"
+  },
+  {
     "name": "Dragonlord Placidusax",
     "game": "Elden Ring prerequisite",
     "area": "Prerequisite bosses (not in mod list)",
